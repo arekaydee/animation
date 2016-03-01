@@ -18,9 +18,9 @@ function draw(){
   noStroke();
   fill("white");
 
-for(a = 0; a < 6; a = a+1){
-    arc(width/2,height/2,100,100,a+i,a+i+PI/10);
-  }
+  drawPinWheel(width/2,height/2);
+  drawPinWheel(width/4,height/2);
+  drawPinWheel(width/4,height/4);
 
 i = i + speed;
 
@@ -43,4 +43,9 @@ i = i + speed;
       speed = 1/4;
       c = color("rgba(0, 0, 255, .8)");
       }
+}
+function drawPinWheel(x,y){
+  for(a = 0; a < 6; a = a+1){
+    arc(x,y,100,100,a+i,a+i+PI/10);
+  }
 }
